@@ -1,0 +1,5 @@
+对get请求 post请求 json格式参数请求进行封装
+封装header 请求参数
+cookie 持久化处理
+对返回数据进行gson 格式 json格式方式处理
+增加日志打印

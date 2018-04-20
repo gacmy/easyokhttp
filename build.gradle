@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        //    maven { url 'https://maven.google.com' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+ext {
+    android = [compileSdkVersion: 26,
+               buildToolsVersion: "27.0.2",
+               minSdkVersion    : 14,
+               targetSdkVersion : 22]
+
+    dependencies = [
+            "junit"                  : "junit:junit:4.12",
+            "support-v4"             : "com.android.support:support-v4:26.1.0",
+            "appcompat-v7"           : "com.android.support:appcompat-v7:26.1.0",
+            "recyclerview-v7"        : "com.android.support:recyclerview-v7:26.1.0",
+            //圆角和阴影的布局
+            "cardview-v7"            : "com.android.support:cardview-v7:26.1.0",
+            "okhttp"                :  "com.squareup.okhttp3:okhttp:3.8.0",
+            "gson"                   : "com.google.code.gson:gson:2.8.0",
+            //约束布局
+            "constraint-layout"      : "com.android.support.constraint:constraint-layout:1.0.2",
+            //注解框架
+            "butterknife"            : "com.jakewharton:butterknife:8.6.0",
+            "butterknife-compiler"   : "com.jakewharton:butterknife-compiler:8.6.0",
+            "rxjava"                 : "io.reactivex:rxjava:1.1.2",
+            "rxandroid"              : "io.reactivex:rxandroid:1.2.0",
+            //google框架文件
+            "design"                 : "com.android.support:design:26.1.0",
+
+            "multidex"               : "com.android.support:multidex:1.0.0",
+
+    ]
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        //    maven { url 'https://maven.google.com' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+//        LRecyclerView 使用
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
