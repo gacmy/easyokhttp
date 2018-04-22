@@ -13,6 +13,7 @@ import okhttp3.Request;
 
 /**
  * Created by gacmy on 2018/3/13.
+ * get 请求
  */
 
 public class EasyGetBuilder extends EasyRequestBuilder<EasyGetBuilder> {

@@ -2,6 +2,8 @@ package com.gac.net.easy.request;
 
 
 
+import android.text.TextUtils;
+
 import com.gac.net.easy.EasyOkHttp;
 import com.gac.net.easy.callback.EasyCallback;
 import com.gac.net.easy.response.IResponseHandler;
@@ -16,18 +18,16 @@ import okhttp3.RequestBody;
 
 /**
  * Created by gacmy on 2018/3/13.
+ * post 请求
  */
 
 public class EasyPostBuilder extends EasyRequestBuilder<EasyPostBuilder> {
-    private String mJsonParams = "";
+
     public EasyPostBuilder() {
         super(new EasyOkHttp());
     }
 
-    public EasyPostBuilder jsonParams(String json){
-        mJsonParams = json;
-        return this;
-    }
+
     @Override
    public void enqueue(IResponseHandler responseHandler) {
         if(mUrl == null || mUrl.length() == 0){
@@ -43,7 +43,7 @@ public class EasyPostBuilder extends EasyRequestBuilder<EasyPostBuilder> {
             builder.tag(mTag);
         }
         String mParamsInfo;
-        if(mJsonParams.length() > 0) {      //上传json格式参数
+        if(!TextUtils.isEmpty(mJsonParams)) {      //上传json格式参数
             mParamsInfo = mJsonParams;
             RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), mJsonParams);
             builder.post(body);
@@ -68,6 +68,9 @@ public class EasyPostBuilder extends EasyRequestBuilder<EasyPostBuilder> {
             }
         }
     }
+
+
+
 }
 
 

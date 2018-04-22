@@ -19,6 +19,7 @@ import okhttp3.Response;
 
 /**
  * Created by gacmy on 2018/3/13.
+ * //下载 请求
  */
 
 public class EasyDownloadBuilder {
@@ -31,8 +32,8 @@ public class EasyDownloadBuilder {
     private String mFilePath="";//文件路径
     private Long mCompleteBytes = 0L;//已经完成的字节数 断点续传
 
-    public EasyDownloadBuilder(EasyOkHttp client){
-        mClient = client;
+    public EasyDownloadBuilder(){
+        mClient = new EasyOkHttp();
     }
 
     public EasyDownloadBuilder url(String url){

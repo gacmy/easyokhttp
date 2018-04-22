@@ -63,6 +63,7 @@ public class ResponseProgressBody extends ResponseBody {
 //                if (mDownloadResponseHandler != null) {
 //                    mDownloadResponseHandler.onProgress(totalBytesRead, mResponseBody.contentLength());
 //                }
+
                 return bytesRead;
             }
         };

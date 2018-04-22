@@ -1,17 +1,12 @@
 package com.gac.net.easy.response;
-
-
 import com.gac.net.easy.EasyOkHttp;
 import com.google.gson.Gson;
 import com.google.gson.internal.$Gson$Types;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.Arrays;
 import java.util.List;
-
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
